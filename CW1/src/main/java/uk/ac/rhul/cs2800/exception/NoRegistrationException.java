@@ -3,7 +3,7 @@ package uk.ac.rhul.cs2800.exception;
 /**
  * Exception thrown when a registration record is not available or not found.
  */
-public class NoRegistrationException extends Exception{
+public class NoRegistrationException extends Exception {
   private static final long serialVersionUID = 6170059689585944581L;
 
   /**

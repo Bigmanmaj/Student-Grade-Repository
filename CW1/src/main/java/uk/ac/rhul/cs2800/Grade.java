@@ -5,6 +5,7 @@ package uk.ac.rhul.cs2800;
  */
 public class Grade {
   private Integer score;
+  Module module;
 
   /**
    * Sets the score for this grade.

@@ -1,7 +1,7 @@
 package uk.ac.rhul.cs2800;
 
 /**
- * Represents a module with a code name and mnc (mandatory non-condonable) status
+ * Represents a module with a code name and mnc (mandatory non-condonable) status.
  */
 public class Module {
   private String code;

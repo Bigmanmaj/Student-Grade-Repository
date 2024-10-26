@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import uk.ac.rhul.cs2800.exception.NoGradeAvailableException;
 
+/**
+ * Class representing student.
+ */
 public class Student {
   private long id;
   private String firstName;
@@ -104,29 +107,38 @@ public class Student {
   }
 
   /**
-   * adds the grade into the list of grades for the student
-   * 
+   * adds the grade into the list of grades for the student.
+   *
    * @param g grade to be added
    */
   public void addGrade(Grade g) {
     grades.add(g);
   }
 
+  /**
+   * Registers a module, m for the student.
+   *
+   * @param m Module to be registered to student
+   */
   public void registerModule(Module m) {
 
   }
 
+  /**
+   * Retrieves the grade for the given module.
+   *
+   * @param m Module for which grade to get
+   */
   public void getGrade(Module m) {
 
   }
 
   /**
-   * computes the average grade of the student
-   * 
+   * computes the average grade of the student.
+   *
    * @return the average of all grades for the student
    * @throws NoGradeAvailableException
    */
-
   public float computeAverage() throws NoGradeAvailableException {
     float average = 0;
     int counter = 0;
