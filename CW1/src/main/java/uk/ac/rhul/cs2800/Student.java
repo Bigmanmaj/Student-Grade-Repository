@@ -1,11 +1,16 @@
 package uk.ac.rhul.cs2800;
 
+import java.util.ArrayList;
+import java.util.List;
+import uk.ac.rhul.cs2800.exception.NoGradeAvailableException;
+
 public class Student {
   private long id;
   private String firstName;
   private String lastName;
   private String userName;
   private String email;
+  private List<Grade> grades = new ArrayList<Grade>();
   
   /**
    * Sets the ID for this instance.
@@ -96,5 +101,42 @@ public class Student {
    */
   public String getEmail() {
     return email;
+  }
+
+  /**
+   * adds the grade into the list of grades for the student
+   * 
+   * @param g grade to be added
+   */
+  public void addGrade(Grade g) {
+    grades.add(g);
+  }
+
+  public void registerModule(Module m) {
+
+  }
+
+  public void getGrade(Module m) {
+
+  }
+
+  /**
+   * computes the average grade of the student
+   * 
+   * @return the average of all grades for the student
+   * @throws NoGradeAvailableException
+   */
+
+  public float computeAverage() throws NoGradeAvailableException {
+    float average = 0;
+    int counter = 0;
+    if (grades.get(0) == null) {
+      throw new NoGradeAvailableException("Student has no Registered grades");
+    }
+    for (Grade g : grades) {
+      average += g.getScore();
+      counter++;
+    }
+    return average / (float) counter;
   }
 }
