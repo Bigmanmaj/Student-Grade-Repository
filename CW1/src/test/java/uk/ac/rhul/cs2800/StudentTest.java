@@ -23,4 +23,18 @@ public class StudentTest {
     student.setLastName("Jackson");
     assertEquals(student.getLastName(), "Jackson");
   }
+
+  @Test
+  void getUserNameTest() {
+    Student student = new Student();
+    student.setUserName("JAC1678");
+    assertEquals(student.getUserName(), "JAC1678");
+  }
+
+  @Test
+  void getEmailTest() {
+    Student student = new Student();
+    student.setEmail("JAC1678@AwesomeUniversity.uk");
+    assertEquals(student.getEmail(), "JAC1678@AwesomeUniversity.uk");
+  }
 }
