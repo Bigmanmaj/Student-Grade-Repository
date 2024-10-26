@@ -42,4 +42,32 @@ public class Student {
   public String getFirstName() {
     return firstName;
   }
+
+  /**
+   * Sets the last name for this instance.
+   *
+   * @param newLastName The new last name to set.
+   */
+  public void setLastName(String newLastName) {
+    lastName = newLastName;
+  }
+
+  /**
+   * Retrieves the last name of this instance.
+   *
+   * @return The last name of this instance.
+   */
+  public String getLastName() {
+    return lastName;
+  }
+
+  /**
+   * Sets the username for this instance.
+   *
+   * @param newUserName The new username to set.
+   */
+  public void setUserName(String newUserName) {
+    userName = newUserName;
+  }
+
 }
