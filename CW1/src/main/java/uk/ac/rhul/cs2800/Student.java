@@ -137,7 +137,8 @@ public class Student {
    * computes the average grade of the student.
    *
    * @return the average of all grades for the student
-   * @throws NoGradeAvailableException
+   * @throws NoGradeAvailableException Exception thrown when student has no grades available,
+   *         meaning no average can be calculated
    */
   public float computeAverage() throws NoGradeAvailableException {
     float average = 0;
