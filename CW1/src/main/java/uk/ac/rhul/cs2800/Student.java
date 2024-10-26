@@ -70,4 +70,31 @@ public class Student {
     userName = newUserName;
   }
 
+  /**
+   * Retrieves the username of this instance.
+   *
+   * @return The username of this instance.
+   */
+  public String getUserName() {
+    return userName;
+  }
+
+  /**
+   * Sets the email for this instance.
+   *
+   * @param newEmail The new email to set.
+   */
+
+  public void setEmail(String newEmail) {
+    email = newEmail;
+  }
+
+  /**
+   * Retrieves the email of this instance.
+   *
+   * @return The email of this instance.
+   */
+  public String getEmail() {
+    return email;
+  }
 }

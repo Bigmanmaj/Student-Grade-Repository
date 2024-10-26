@@ -10,11 +10,17 @@ public class StudentTest {
     student.setId(1678);
     assertEquals(student.getId(), 1678);
   }
-
   @Test
   void getFirstNameTest() {
     Student student = new Student();
     student.setFirstName("Benjamin");
     assertEquals(student.getFirstName(), "Benjamin");
+  }
+
+  @Test
+  void getLastNameTest() {
+    Student student = new Student();
+    student.setLastName("Jackson");
+    assertEquals(student.getLastName(), "Jackson");
   }
 }
