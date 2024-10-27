@@ -1,6 +1,7 @@
 package uk.ac.rhul.cs2800;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 import uk.ac.rhul.cs2800.exception.NoGradeAvailableException;
@@ -106,6 +107,23 @@ public class StudentTest {
     student.registerModule(m);
     try {
       assertEquals(student.getGrade(m), g1);
+    } catch (NoRegistrationException e) {
+      // TODO Auto-generated catch block
+    }
+  }
+
+  @Test
+  void getGradeTest3() {
+    Student student = new Student();
+    Grade g1 = new Grade();
+    Module m = new Module();
+    Module m1 = new Module();
+    m1.setCode("CS1500");
+    g1.setModule(m);
+    student.addGrade(g1);
+    student.registerModule(m);
+    try {
+      assertNotEquals(student.getGrade(m1), g1);
     } catch (NoRegistrationException e) {
       // TODO Auto-generated catch block
     }

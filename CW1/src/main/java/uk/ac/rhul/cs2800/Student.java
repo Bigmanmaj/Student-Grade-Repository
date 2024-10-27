@@ -135,12 +135,19 @@ public class Student {
    * @throws NoRegistrationException thrown when no modules are registered for the student
    */
   public Grade getGrade(Module m) throws NoRegistrationException {
+    int pointer = -1;
+    int counter = 0;
     for (Grade g : grades) {
       if (g.getModule().equals(m)) {
-        return g;
+        pointer = counter;
       }
+      counter++;
     }
-    throw new NoRegistrationException("No Registered Modules");
+    if (pointer == -1) {
+      throw new NoRegistrationException("No Registered Modules");
+    } else {
+      return grades.get(pointer);
+    }
   }
 
   /**
