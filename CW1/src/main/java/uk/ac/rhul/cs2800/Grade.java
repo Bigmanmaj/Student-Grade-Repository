@@ -5,7 +5,7 @@ package uk.ac.rhul.cs2800;
  */
 public class Grade {
   private Integer score;
-  Module module;
+  private Module module;
 
   /**
    * Sets the score for this grade.
@@ -23,5 +23,23 @@ public class Grade {
    */
   public Integer getScore() {
     return score;
+  }
+
+  /**
+   * set module to parameter given.
+   * 
+   * @param setModule corresponding module
+   */
+  public void setModule(Module setModule) {
+    module = setModule;
+  }
+
+  /**
+   * retrieves corresponding module.
+   * 
+   * @return corresponding module
+   */
+  public Module getModule() {
+    return module;
   }
 }

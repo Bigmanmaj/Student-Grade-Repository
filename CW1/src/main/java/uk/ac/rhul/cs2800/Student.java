@@ -3,6 +3,7 @@ package uk.ac.rhul.cs2800;
 import java.util.ArrayList;
 import java.util.List;
 import uk.ac.rhul.cs2800.exception.NoGradeAvailableException;
+import uk.ac.rhul.cs2800.exception.NoRegistrationException;
 
 /**
  * Class representing student.
@@ -131,9 +132,19 @@ public class Student {
    * Retrieves the grade for the given module.
    *
    * @param m Module for which grade to get
+   * @throws NoRegistrationException
    */
-  public void getGrade(Module m) {
+  public Grade getGrade(Module m) throws NoRegistrationException {
     // note this is meant to return Grade but is annoying to implement
+    if (registrations.size() == 0) {
+      throw new NoRegistrationException("No Registered Modules");
+    }
+    for (Grade g : grades) {
+      if (g.getModule().equals(m)) {
+        return g;
+      }
+    }
+    return null;
   }
 
   /**
