@@ -135,7 +135,6 @@ public class Student {
    * @throws NoRegistrationException
    */
   public Grade getGrade(Module m) throws NoRegistrationException {
-    // note this is meant to return Grade but is annoying to implement
     if (registrations.size() == 0) {
       throw new NoRegistrationException("No Registered Modules");
     }
