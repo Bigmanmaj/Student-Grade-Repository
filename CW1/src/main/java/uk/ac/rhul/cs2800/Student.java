@@ -135,15 +135,12 @@ public class Student {
    * @throws NoRegistrationException
    */
   public Grade getGrade(Module m) throws NoRegistrationException {
-    if (registrations.size() == 0) {
-      throw new NoRegistrationException("No Registered Modules");
-    }
     for (Grade g : grades) {
       if (g.getModule().equals(m)) {
         return g;
       }
     }
-    return null;
+    throw new NoRegistrationException("No Registered Modules");
   }
 
   /**

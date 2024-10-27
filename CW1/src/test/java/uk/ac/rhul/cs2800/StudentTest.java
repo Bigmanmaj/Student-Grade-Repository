@@ -48,6 +48,7 @@ public class StudentTest {
 
   @Test
   void getAverageTest1() {
+    // Test 7
     assertThrows(NoGradeAvailableException.class, () -> {
       Student student = new Student();
       student.computeAverage();
@@ -56,6 +57,7 @@ public class StudentTest {
 
   @Test
   void getAverageTest2() {
+    // Test 8
     Student student = new Student();
     Grade g1 = new Grade();
     g1.setScore(10);
@@ -69,6 +71,7 @@ public class StudentTest {
 
   @Test
   void getAverageTest3() {
+    // Test 8
     Student student = new Student();
     Grade g1 = new Grade();
     Grade g2 = new Grade();
@@ -85,6 +88,7 @@ public class StudentTest {
 
   @Test
   void getGradeTest1() {
+    // Test 9
     assertThrows(NoRegistrationException.class, () -> {
       Student student = new Student();
       student.getGrade(new Module());
@@ -93,6 +97,7 @@ public class StudentTest {
 
   @Test
   void getGradeTest2() {
+    // Test 10
     Student student = new Student();
     Grade g1 = new Grade();
     Module m = new Module();
@@ -103,7 +108,6 @@ public class StudentTest {
       assertEquals(student.getGrade(m), g1);
     } catch (NoRegistrationException e) {
       // TODO Auto-generated catch block
-      e.printStackTrace();
     }
   }
 }
