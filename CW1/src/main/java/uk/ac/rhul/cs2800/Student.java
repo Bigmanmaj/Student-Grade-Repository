@@ -132,7 +132,7 @@ public class Student {
    * Retrieves the grade for the given module.
    *
    * @param m Module for which grade to get
-   * @throws NoRegistrationException
+   * @throws NoRegistrationException thrown when no modules are registered for the student
    */
   public Grade getGrade(Module m) throws NoRegistrationException {
     for (Grade g : grades) {
