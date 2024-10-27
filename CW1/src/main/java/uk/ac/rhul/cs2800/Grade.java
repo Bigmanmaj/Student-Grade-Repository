@@ -27,7 +27,7 @@ public class Grade {
 
   /**
    * set module to parameter given.
-   * 
+   *
    * @param setModule corresponding module
    */
   public void setModule(Module setModule) {
@@ -36,7 +36,7 @@ public class Grade {
 
   /**
    * retrieves corresponding module.
-   * 
+   *
    * @return corresponding module
    */
   public Module getModule() {
