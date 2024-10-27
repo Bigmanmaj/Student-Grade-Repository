@@ -14,6 +14,7 @@ public class Student {
   private String userName;
   private String email;
   private List<Grade> grades = new ArrayList<Grade>();
+  private List<Registration> registrations = new ArrayList<Registration>();
   
   /**
    * Sets the ID for this instance.
@@ -121,7 +122,8 @@ public class Student {
    * @param m Module to be registered to student
    */
   public void registerModule(Module m) {
-
+    Registration registration = new Registration(m);
+    registrations.add(registration);
   }
 
   /**
