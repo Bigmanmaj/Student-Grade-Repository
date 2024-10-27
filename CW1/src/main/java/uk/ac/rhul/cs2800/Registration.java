@@ -7,12 +7,12 @@ public class Registration {
   private Module m;
 
   /**
-   * registers one module to the student.
+   * registers module for student.
    * 
-   * @param module to be registered
+   * @param newModule module to be registered
    */
-  public Registration(Module module) {
-    m = module;
+  public void setModule(Module newModule) {
+    m = newModule;
   }
 
   /**

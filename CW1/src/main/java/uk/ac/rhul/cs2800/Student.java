@@ -122,7 +122,8 @@ public class Student {
    * @param m Module to be registered to student
    */
   public void registerModule(Module m) {
-    Registration registration = new Registration(m);
+    Registration registration = new Registration();
+    registration.setModule(m);
     registrations.add(registration);
   }
 
@@ -132,7 +133,7 @@ public class Student {
    * @param m Module for which grade to get
    */
   public void getGrade(Module m) {
-
+    // note this is meant to return Grade but is annoying to implement
   }
 
   /**
@@ -145,7 +146,7 @@ public class Student {
   public float computeAverage() throws NoGradeAvailableException {
     float average = 0;
     int counter = 0;
-    if (grades.get(0) == null) {
+    if (grades.size() == 0) {
       throw new NoGradeAvailableException("Student has no Registered grades");
     }
     for (Grade g : grades) {
