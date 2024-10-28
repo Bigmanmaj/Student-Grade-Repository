@@ -111,34 +111,34 @@ public class Student {
   /**
    * adds the grade into the list of grades for the student.
    *
-   * @param g grade to be added
+   * @param grade grade to be added
    */
-  public void addGrade(Grade g) {
-    grades.add(g);
+  public void addGrade(Grade grade) {
+    grades.add(grade);
   }
 
   /**
    * Registers a module, m for the student.
    *
-   * @param m Module to be registered to student
+   * @param module Module to be registered to student
    */
-  public void registerModule(Module m) {
+  public void registerModule(Module module) {
     Registration registration = new Registration();
-    registration.setModule(m);
+    registration.setModule(module);
     registrations.add(registration);
   }
 
   /**
    * Retrieves the grade for the given module.
    *
-   * @param m Module for which grade to get
+   * @param module Module for which grade to get
    * @throws NoRegistrationException thrown when no modules are registered for the student
    */
-  public Grade getGrade(Module m) throws NoRegistrationException {
+  public Grade getGrade(Module module) throws NoRegistrationException {
     int pointer = -1;
     int counter = 0;
     for (Grade g : grades) {
-      if (g.getModule().equals(m)) {
+      if (g.getModule().equals(module)) {
         pointer = counter;
       }
       counter++;
