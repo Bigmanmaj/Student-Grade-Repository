@@ -1,10 +1,31 @@
 package uk.ac.rhul.cs2800.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
 /**
  * Represents a grade with an Integer score.
  */
+@Entity
 public class Grade {
+
+  @Id
+  @GeneratedValue
+  Long id;
+
+  @Column(name = "score")
   private Integer score;
+
+  @ManyToOne
+  @JoinColumn(name = "student_id")
+  private Student student;
+
+  @ManyToOne
+  @JoinColumn(name = "module_code")
   private Module module;
 
   /**

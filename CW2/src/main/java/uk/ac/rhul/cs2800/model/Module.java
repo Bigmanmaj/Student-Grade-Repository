@@ -1,11 +1,20 @@
 package uk.ac.rhul.cs2800.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 /**
  * Represents a module with a code name and mnc (mandatory non-condonable) status.
  */
+@Entity
 public class Module {
+  @Id
+  @Column(name = "code")
   private String code;
+  @Column(name = "name")
   private String name;
+  @Column(name = "mnc")
   private Boolean mnc;
 
   /**
