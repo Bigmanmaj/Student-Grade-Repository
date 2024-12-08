@@ -63,4 +63,12 @@ public class Grade {
   public Module getModule() {
     return module;
   }
+
+  public void setStudent(Student newStudent) {
+    student = newStudent;
+  }
+
+  public Student getStudent() {
+    return student;
+  }
 }
