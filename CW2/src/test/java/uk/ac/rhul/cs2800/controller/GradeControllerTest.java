@@ -58,9 +58,9 @@ public class GradeControllerTest {
   @Test
   void addGradeTest() throws JsonProcessingException, Exception {
     Map<String, Integer> params = new HashMap<String, Integer>();
-    params.put("id", 1);
+    params.put("student_id", 1);
     params.put("score", 94);
-    params.put("code", 2800);
+    params.put("module_code", 2800);
       MvcResult action = mockMvc
           .perform(MockMvcRequestBuilders.post("/grades/addGrade")
               .contentType(MediaType.APPLICATION_JSON)

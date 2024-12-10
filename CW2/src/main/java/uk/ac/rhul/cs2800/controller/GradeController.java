@@ -48,10 +48,9 @@ public class GradeController {
     // Create a Grade object and set all values
     // Save the Grade object.
     // Return the saved Grade object.
-    System.out.println(params);
     Student student =
-        studentRepository.findById(Long.valueOf(params.get("id"))).orElseThrow();
-    Module module = moduleRepository.findById(params.get("code")).orElseThrow();
+        studentRepository.findById(Long.valueOf(params.get("student_id"))).orElseThrow();
+    Module module = moduleRepository.findById(params.get("module_code")).orElseThrow();
     Grade grade = new Grade();
     grade.setModule(module);
     grade.setStudent(student);
