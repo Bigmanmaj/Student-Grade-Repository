@@ -1,6 +1,7 @@
 package uk.ac.rhul.cs2800.model;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -22,7 +23,9 @@ public class Student {
   @Column(name = "lastName")
   private String lastName;
   @Column(name = "username")
-  private String userName;
+  // fixes username attribute not being changed for some reason
+  @JsonProperty("username")
+  private String username;
   @Column(name = "email")
   private String email;
   @OneToMany
@@ -90,7 +93,7 @@ public class Student {
    * @param newUserName The new username to set.
    */
   public void setUserName(String newUserName) {
-    userName = newUserName;
+    username = newUserName;
   }
 
   /**
@@ -99,7 +102,7 @@ public class Student {
    * @return The username of this instance.
    */
   public String getUserName() {
-    return userName;
+    return username;
   }
 
   /**
